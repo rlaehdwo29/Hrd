@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#f2f2f2">
+    	<include layout="@layout/titlebar"></include>
+    
+ <ScrollView
+     android:id="@+id/scrollView1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content" android:layout_weight="1">
+
+     <LinearLayout
+         android:id="@+id/linearLayout1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+
+
+
+         <LinearLayout
+             style="@style/box_wrap"
+             android:layout_width="match_parent"
+             android:orientation="vertical" >
+
+             <TextView
+                 style="@style/box_top"
+                 android:text="계정정보" />
+
+             <LinearLayout
+                 android:id="@+id/relativeLayout1"
+                 style="@style/box_bottom">
+
+                 <TextView
+                     android:id="@+id/tv_id"
+                     style="@style/box_sub_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="30dp"
+                     android:layout_weight="1" />
+
+
+                 <Button
+                     android:id="@+id/btn_login_info"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:background="@null"
+                     android:text="로그아웃"
+                     android:textColor="#d52d2d" />
+
+             </LinearLayout>
+         </LinearLayout>
+
+         <LinearLayout
+             style="@style/box_wrap"
+             android:layout_width="match_parent"
+             android:orientation="vertical" >
+
+             <TextView
+                 style="@style/box_top"
+                 android:text="데이터 설정" />
+
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout02"
+                 style="@style/box_bottom"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView04"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="3G/LTE 접속 허용" />
+
+                 <CheckBox
+                     android:id="@+id/chk_3g"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+             </RelativeLayout>
+
+         </LinearLayout>
+
+         <LinearLayout
+             style="@style/box_wrap"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:layout_height="wrap_content" >
+
+             <TextView
+                 style="@style/box_top"
+                 android:text="다운로드 용량"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+             <LinearLayout
+                 style="@style/box_bottom"
+                 android:id="@+id/relativeLayout"
+                 android:layout_marginBottom="5dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" >
+
+                 <TextView
+                     style="@style/box_text"
+                     android:id="@+id/tv_storage"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="false"
+                     android:layout_centerVertical="true"
+                     android:layout_weight="1" />
+
+                 <Button
+                     android:id="@+id/btn_filedelete"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:background="@null"
+                     android:text="삭제하기"
+                     android:textColor="#d52d2d"
+                     android:layout_alignParentRight="true"
+                     android:layout_centerVertical="true"
+                     android:visibility="visible" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+         <LinearLayout
+             style="@style/box_wrap"
+             android:layout_width="match_parent"
+             android:orientation="vertical" >
+
+             <TextView
+                 style="@style/box_top"
+                 android:text="알림 설정" />
+
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout04"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView03"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="알림 이용" />
+
+
+                 <CheckBox
+                     android:id="@+id/chk_alarm"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+
+             </RelativeLayout>
+<!--  
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout03"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView02"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="Schedule" />
+
+                 <CheckBox
+                     android:id="@+id/chk_study"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+             </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout03"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView02"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="Knowledge+" />
+
+                 <CheckBox
+                     android:id="@+id/chk_dl"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+             </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout03"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView02"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="People+" />
+                 <CheckBox
+                     android:id="@+id/chk_stream"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+             </RelativeLayout>
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout03"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView02"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="1:1 상담" />
+
+                 <CheckBox
+                     android:id="@+id/chk_board"
+                     style="@style/box_check"
+                     android:layout_alignParentRight="true" />
+             </RelativeLayout>
+             -->
+         </LinearLayout>
+
+         <LinearLayout
+             style="@style/box_wrap"
+             android:layout_width="match_parent"
+             android:orientation="vertical" >
+
+             <TextView
+                 style="@style/box_top"
+                 android:text="프로그램 업데이트 정보" />
+
+             <RelativeLayout
+                 android:id="@+id/RelativeLayout06"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" >
+
+                 <TextView
+                     android:id="@+id/TextView06"
+                     style="@style/box_sub_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="현재 버전" />
+				<TextView
+                     android:id="@+id/tv_current"
+                     style="@style/box_sub_text"
+                     android:text="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginRight="15dp"/>
+             </RelativeLayout>
+
+
+
+
+             <RelativeLayout
+                 android:id="@+id/layout_newver"
+                 style="@style/box_bottom"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="5dp" android:visibility="gone">
+
+                 <TextView
+                     android:id="@+id/TextView05"
+                     style="@style/box_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentLeft="true"
+                     android:text="최신 버전 " />
+
+
+
+                 
+
+                 <Button
+                     android:id="@+id/btn_update"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:background="@null" />
+
+                 <TextView
+                     android:id="@+id/tv_new"
+                     style="@style/box_sub_text"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginRight="10dp"
+                     android:text="1.0" android:layout_centerVertical="true" android:textColor="#000"/>
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+
+     </LinearLayout>
+
+ </ScrollView>
+</LinearLayout>

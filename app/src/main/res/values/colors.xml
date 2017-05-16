@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="login_text">#423e83</color>
+    <color name="login_hint_text">#c1bedf</color>
+
+    <color name="point">#086bef</color>
+    <color name="list_bg">#f5f5f5</color>
+    <color name="lecture_text">#323232</color>
+    <color name="tab_bg">#323232</color>
+    <color name="lecture_hint">#878787</color>
+    <color name="lecture_text_blue">#4b8be9</color>
+    <color name="pkg_courese_text">#4b4b4b</color>
+    <color name="list_line">#b4b4b4</color>
+    <color name="progrerss_blue_ing">#5190F0</color>
+    <color name="progrerss_blue_none">#f0f0f0</color>
+    <color name="progrerss_blue_text">#508ff0</color>
+    <color name="progrerss_org_ing">#F87439</color>
+    <color name="progrerss_org_none">#f0f0f0</color>
+    <color name="progrerss_org_text">#fd5c15</color>
+    <color name="sub_text">#646464</color>
+    <color name="alert_text">#ff670b</color>
+    <color name="prof_text">#4b4b4b</color>
+    <color name="lecture_bold_text">#232323</color>
+    <color name="sub_light_text">#878787</color>
+    <color name="sub_menu_bg">#f0f0f0</color>
+    <color name="hint_txt">#6c6c6c</color>
+    <color name="transperate">#00ffffff</color>
+    <color name="push_bg">#61c03b</color>
+    <color name="day_circle">#5090ed</color>
+    <color name="w_list_line">#969696</color>
+    <color name="voca_memory_cnt">#ff6a07</color>
+    <color name="voca_result_line">#c8c8c8</color>
+    <color name="time_bg">#6b60c4</color>
+    <color name="poptitle">#2e79e7</color>
+
+
+</resources>

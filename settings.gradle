@@ -1,0 +1,1 @@
+include ':app', ':actionbarsherlock', ':actionbarsherlock-fest', ':actionbarsherlock-i18n'

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">스마트연수원</string>
+    <string name="stway_license">Powered by StreamingWay</string>
+    <string name="libraryKey">9f2a104b8a4143b19d2f746370818eb9</string>
+    
+    <!-- 로그인 -->
+    <string name="login">로그인</string>
+    <string name="id_null">아이디를 입력하시오</string>
+    <string name="pass_null">비밀번호를 입력하시오</string>
+    <string name="comp_null">회사명을 선택하시오</string>
+    <string name="id_hint">아이디</string>
+    <string name="pass_hint">비밀번호</string>
+    <string name="title">Global e-Campus</string>
+    <string name="other_course">다른과정보기</string>
+    <string name="app_exit">프로그램을 종료 하시겠습니까?</string>
+
+    <!-- error -->
+    <string name="video_3g_alert">3G/LTE 네트워크를 사용할 경우 데이터 요금이 부과 될 수 있습니다. (3G/LTE로 수강을 원하시는 경우 설정에서 활성화 해주세요)</string>
+    <string name="down_3g_alert">3G/LTE 네트워크를 사용할 경우 데이터 요금이 부과 될 수 있습니다. (3G/LTE로 다운로드를 원하시는 경우 설정에서 활성화 해주세요)</string>
+    <string name="crash_toast_text">오류가 발생했습니다. 개발자에게 해당 오류를 개선하기 위해 오류 보고서를 전송합니다.</string>
+    <string name="api_http_alert">통신 장애가 발생하였습니다.</string>
+    <string name="err_video">동영상을 재생할 수 없습니다.</string>
+    <string name="err_upload_session">갤럭시S1, 갤럭시 호핀 등에서는 사진올리기 기능이 원활하지 않습니다.\n해당 모델에서는 메모리정리 후 다시 이용해주세요.</string>
+    <!-- 알림 -->
+    <string name="api_wait_msg">Loading ...</string>
+    <string name="empty_list">강의리스트가 없습니다.</string>
+    
+    <!-- info -->
+    <string name="info_end">동영상 재생이 끝났습니다.</string>
+
+    <!-- pull to refresh -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+
+    <!-- 업데이트 알림 -->
+    <string name="update_alert">새로운 앱이 있습니다. 업데이트 하시겠습니까?</string>
+    <string name="update_title">업데이트</string>
+    <string name="loading_video">Loading video</string>
+    <string name="call_number">+82-2-0000-0000</string>
+    <string name="session_expired">세션이 만료되어 앱을 종료합니다.</string>
+    <!-- 강의 -->
+    <string name="curri_info1">학습목록을 선택하시면 해당 강의를 수강하실 수 있습니다.</string>
+    <string name="curri_info2">차시별로 다운로드 후 수강하실 수 있습니다.</string>
+    <string name="curri_info3">다운로드 받은 파일은 다운로드 메뉴에서 확인 가능합니다.</string>
+    <string name="curri_warn">※ 과제 및 최종평가는 PC에서 제출 및 응시 가능합니다.</string>
+    <string name="confirm_delete">정말 삭제 하시겠습니까?</string>
+    <string name="no_delete">삭제할 파일이 존재하지 않습니다.</string>
+
+</resources>
