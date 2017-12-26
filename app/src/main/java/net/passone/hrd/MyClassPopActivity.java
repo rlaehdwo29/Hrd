@@ -369,6 +369,12 @@ public class MyClassPopActivity extends IntentModelActivity {
 //			loadWebView("javascript:fnMarkerWrite(0,'"+str_finish+"','"+CUser.currenttime+"')");
 			
 		}
+		if(CUser.userid.isEmpty())
+		{
+			loadUserInfo();
+			if(mWebView!=null)
+				mWebView.reload();
+		}
 		//			mWebView.loadUrl("javascript:fnsavesec1('"+CUser.lasttime+"')");
 		CUser.lasttime=0;
 		if(CUser.callbackUrl.length()>0)

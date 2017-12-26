@@ -59,8 +59,11 @@
         <activity android:name="LearnPlusActivity">
 
         </activity>
+        <activity android:name="WebActivity" android:configChanges="screenSize|orientation">
+
+        </activity>
         <activity android:name="NoticeActivity"></activity>
-        <activity android:name="MyClassPopActivity" android:configChanges="orientation|screenSize" android:screenOrientation="landscape"></activity>
+        <activity android:name="MyClassPopActivity" android:configChanges="orientation|screenSize" android:screenOrientation="sensorLandscape"></activity>
         <activity android:name="SettingActivity"></activity>
         <activity android:name="SupportActivity"></activity>
         <activity android:name="MainActivity" android:configChanges="keyboard|keyboardHidden|orientation|orientation|screenSize"></activity>

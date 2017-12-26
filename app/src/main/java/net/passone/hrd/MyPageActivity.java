@@ -853,7 +853,6 @@ public class MyPageActivity extends IntentModelActivity implements OnClickListen
 
 
 			}
-			getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		}
 
 		//drmdownload=null;

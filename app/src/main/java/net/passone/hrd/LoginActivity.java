@@ -197,7 +197,10 @@ String userid="",passwd="",siteid="",device_token="";
 			btn_login = (ImageButton)findViewById(R.id.btn_login);
 			btn_login.setOnClickListener(this);
 			 tv_company.setOnClickListener(this);
-			if(Environments.SAVE_ACCOUNT_INFO && (!userid.equals("")))
+		 ((ImageButton)findViewById(R.id.btn_findid)).setOnClickListener(this);
+		 ((ImageButton)findViewById(R.id.btn_findpwd)).setOnClickListener(this);
+
+		 if(Environments.SAVE_ACCOUNT_INFO && (!userid.equals("")))
 			{
 				edit_id.setText(userid.trim());
 				userid = userid.trim();
@@ -353,6 +356,12 @@ String userid="",passwd="",siteid="",device_token="";
 				Util.ToastMessage(self, "아이디를 입력해 주세요");
 			}
 			break;
+			case R.id.btn_findid:
+				startActivity(new Intent(this,WebActivity.class).putExtra("url",Constants.findidUrl));
+				break;
+			case R.id.btn_findpwd:
+				startActivity(new Intent(this,WebActivity.class).putExtra("url",Constants.findpwUrl));
+				break;
 		}
 		super.onClick(v);
 	}

@@ -303,6 +303,11 @@ public class MyClassActivity extends IntentModelActivity {
 		if(alert!=null)
 			alert.dismiss();
 		super.onResume();
+		if(CUser.userid.isEmpty())
+		{
+			loadUserInfo();
+
+		}
 		mWebView.reload();
 		// TODO Auto-generated method stub
 

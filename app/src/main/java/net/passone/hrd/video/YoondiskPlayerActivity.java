@@ -138,7 +138,7 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
     // int play_cnt = 0;
     @Override
     public void onResponseReceived(int api, Object result) {
-        try {
+//        try {
             net.passone.hrd.common.Util.debug("Login result    :   " + result);
             switch(api) {
                 case Api.STATUS:
@@ -208,7 +208,14 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
                             studykey = move.studykey;
                             is_finish=move.finish;
                             p_markerTime=move.markertime;
+                            cur_posi = Integer.parseInt(p_markerTime);
+                            cur_milpos=cur_posi*1000;
+                            last_posi=cur_posi*1000;
                             is_control=move.controlpbar;
+                            if(is_control.equals("N"))
+                                mSeekbar.setEnabled(false);
+                            else
+                                mSeekbar.setEnabled(true);
                             String filename=classkey+"_"+part+"_"+page+".mp4";
                             if(mLocation.length()==0)
                             {
@@ -234,6 +241,8 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
                             Log.d("passone","start_time=&cur_posi="+cur_posi);
                             // 상단 타이틀 표시
                             mTitle.setText(title+" "+chasi);
+                            VideoLib.stop();
+
                             // 플레이어 embed 재생시작!! start_player() 함수를 참조하세요.
                             eventHandler.postDelayed(new Runnable() {
                                 @Override
@@ -259,7 +268,7 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
                                     public void run() {
 
                                         String state = "";
-                                        sHandler.post(showToastMessage);
+//                                        sHandler.post(showToastMessage);
 
                                         sendPlayStatus((int) VideoLib.getTime());
                                     }
@@ -409,7 +418,10 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
                 break;
                 */
             }
-        }catch(Exception e){}
+//        }catch(Exception e){
+//            net.passone.hrd.common.Util.debug("onResponseReceived:"+e.toString());
+//
+//        }
     }
 
     private enum RepeatState {NONE, START, END, ING};
@@ -697,8 +709,10 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
         mSurfaceHolder.addCallback(mSurfaceCallback);
 
         mSeekbar = (SeekBar) findViewById(R.id.player_overlay_seekbar);
-        mSeekbar.setOnSeekBarChangeListener(mSeekListener);
+        if(is_control.equals("Y")) {
 
+            mSeekbar.setOnSeekBarChangeListener(mSeekListener);
+        }
         // AudioMnanger 및  최대 볼륨 크기 구함.
         mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         mAudioMax = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
@@ -734,7 +748,7 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
 //                finish();
                 timer=null;
                 send_timer=null;
-
+                sendPlayStatus((int) VideoLib.getTime());
                 _api.play_move(classkey,classcount,studykey,nextpart,nextpage,context,callback);
 
             }
@@ -746,6 +760,8 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
 //                finish();
                 timer=null;
                 send_timer=null;
+                sendPlayStatus((int) VideoLib.getTime());
+
                 _api.play_move(classkey,classcount,studykey,prevpart,prevpage,context,callback);
 
             }
@@ -1442,17 +1458,18 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
             jump = (int) (length - time);
         if ((jump < 0) && ((time + jump) < 0))
             jump = (int) -time;
+        if(is_control.equals("Y")) {
+            if (seek && length > 0)
+                VideoLib.setTime(time + jump);
 
-        if (seek && length > 0)
-            VideoLib.setTime(time + jump);
-
-        if (length > 0)
-            showInfo(String.format("%s%s (%s)",
-                    jump >= 0 ? "+" : "",
-                    Util.millisToString(jump),
-                    Util.millisToString(time + jump)), 1000);
-        else
-            showInfo("Unseekable stream", 1000);
+            if (length > 0)
+                showInfo(String.format("%s%s (%s)",
+                        jump >= 0 ? "+" : "",
+                        Util.millisToString(jump),
+                        Util.millisToString(time + jump)), 1000);
+            else
+                showInfo("Unseekable stream", 1000);
+        }
     }
 
     /**
@@ -1884,7 +1901,7 @@ public class YoondiskPlayerActivity extends Activity implements IVideoPlayer, On
                 @Override
                 public void run() {
                     String state="";
-                    sHandler.post(showToastMessage);
+//                    sHandler.post(showToastMessage);
                     sendPlayStatus((int) VideoLib.getTime());
                 }
             }, 0, STATUS_PERIOD);

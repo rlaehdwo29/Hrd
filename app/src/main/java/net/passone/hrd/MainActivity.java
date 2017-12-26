@@ -339,6 +339,12 @@ public class MainActivity extends IntentModelActivity implements OnClickListener
 		if(alert!=null)
 			alert.dismiss();
 		Util.debug("onResume-MainActivity");
+			if(CUser.userid.isEmpty())
+			{
+				loadUserInfo();
+				if(mWebView!=null)
+					mWebView.reload();
+			}
 		super.onResume();
 		// TODO Auto-generated method stub
 
@@ -440,7 +446,7 @@ public class MainActivity extends IntentModelActivity implements OnClickListener
 							final String studykey, final String sns , final String marker , final String finish, final String markerTime, final String control,final String part,final String page,final String sampleyn) { // must be final
 			handler.post(new Runnable() {
 				public void run() {
-					Log.d("passone", "setMessage(" + url + " / " + title + " / " + markerTime + " / " + control + ")");
+					Log.d("passone", "setMessage(" + url + " / " + title + " / " + markerTime + " / " + sampleyn + ")");
 //					if(vurl.equals(url.replace("m06", "s06")))
 //					{
 					String vTitle="";

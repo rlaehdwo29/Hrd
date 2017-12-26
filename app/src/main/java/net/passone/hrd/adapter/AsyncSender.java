@@ -49,8 +49,8 @@ public class AsyncSender extends Thread {
 	@Override
 	public void run() {
 
-		showDialog();
-
+		if(_params.getApi()!=Api.STATUS)
+			showDialog();
 		callback();
 
 		hideDialog();

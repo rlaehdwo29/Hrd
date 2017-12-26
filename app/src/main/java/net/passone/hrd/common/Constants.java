@@ -31,6 +31,9 @@ public class Constants {
 	public static String studyDataUrl="/counsel/dataList.asp";
 	public static String ebookUrl="/ebook/ebook.asp";
 	public static String basicbookUrl="/ebook/basicBook.asp";
+	public static String findidUrl="/member/findid.asp";
+	public static String findpwUrl="/member/findpw.asp";
+
 	public static String cookieUrl="smartclass.campus21.co.kr";
 	public static final String DATABASE_NAME = "UserInfo.db";
 
